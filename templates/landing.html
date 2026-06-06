@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Адвокат Александр Петров | Юридические услуги</title>
+    <title>Адвокат Расим Умеров | Юридические услуги</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         * {
@@ -839,11 +839,12 @@
     </style>
 </head>
 <body>
+1234
     <!-- Header -->
     <header>
         <div class="container">
             <nav>
-                <a href="#" class="logo">Адвокат<span>Расим Умеров</span></a>
+                <a href="#" class="logo">Адвокат<span> Расим Умеров</span></a>
                 <ul class="nav-links">
                     <li><a href="#about">Обо мне</a></li>
                     <li><a href="#services">Услуги</a></li>
@@ -1112,52 +1113,84 @@
 
                 <div class="contact-form">
                     <h3>Оставьте заявку</h3>
-                    <form action="#" method="POST">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Ваше имя *</label>
-                                <input type="text" id="name" name="name" placeholder="Иван Иванов" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Телефон *</label>
-                                <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="example@mail.ru">
-                        </div>
-                        <div class="form-group">
-                            <label for="service">Тип услуги</label>
-                            <select id="service" name="service">
-                                <option value="">Выберите тип услуги</option>
-                                <option value="civil">Гражданские дела</option>
-                                <option value="criminal">Уголовные дела</option>
-                                <option value="corporate">Корпоративное право</option>
-                                <option value="arbitration">Арбитражные споры</option>
-                                <option value="realty">Недвижимость</option>
-                                <option value="labor">Трудовые споры</option>
-                                <option value="other">Другое</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Опишите вашу ситуацию</label>
-                            <textarea id="message" name="message" placeholder="Кратко опишите суть вашего вопроса..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Отправить заявку</button>
-                        <p class="form-note">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
-                    </form>
+
+        <form action="/order" method="POST">
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Ваше имя *</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Иван Иванов"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Телефон *</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="+7 (___) ___-__-__"
+                        required
+                    >
                 </div>
             </div>
-        </div>
-    </section>
 
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="example@mail.ru"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="service">Тип услуги</label>
+
+                <select id="service" name="service">
+                    <option value="">Выберите тип услуги</option>
+                    <option value="civil">Гражданские дела</option>
+                    <option value="criminal">Уголовные дела</option>
+                    <option value="corporate">Корпоративное право</option>
+                    <option value="arbitration">Арбитражные споры</option>
+                    <option value="realty">Недвижимость</option>
+                    <option value="labor">Трудовые споры</option>
+                    <option value="other">Другое</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Опишите вашу ситуацию</label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Кратко опишите суть вашего вопроса..."
+                ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+                Отправить заявку
+            </button>
+
+            <p class="form-note">
+                Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
+            </p>
+
+        </form>
+    </div>
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-about">
-                    <a href="#" class="logo">Адвокат<span>Расим Умеров</span></a>
+                    <a href="#" class="logo">Адвокат<span> Расим Умеров</span></a>
                     <p>Профессиональная юридическая помощь в Симферополе и Республике Крым. Защита ваших прав и интересов — моя главная цель.</p>
                 </div>
                 <div class="footer-column">
@@ -1207,12 +1240,7 @@
             });
         });
 
-        // Form submission handler
-        document.querySelector('.contact-form form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Спасибо за заявку! Мы свяжемся с вами в ближайшее время.');
-            this.reset();
-        });
+
 
         // Header scroll effect
         window.addEventListener('scroll', function() {
