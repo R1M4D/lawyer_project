@@ -9,7 +9,6 @@ def register_routes(app, db, bcrypt):
     def index():
         return render_template('landing.html')
 
-
     @app.route('/order', methods=['POST'])
     def create_order():
         new_order = Order(
