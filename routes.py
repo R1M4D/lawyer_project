@@ -1,7 +1,6 @@
-from flask import render_template, request, url_for, redirect, jsonify, session
-from flask_login import login_user, current_user, logout_user
+from flask import render_template, request, redirect
 from models import Order
-
+from mail import send_email
 
 def register_routes(app, db, bcrypt):
 
@@ -22,7 +21,6 @@ def register_routes(app, db, bcrypt):
         db.session.add(new_order)
         db.session.commit()
 
-
-        print(new_order)
+        send_email(new_order)
 
         return redirect('/')
